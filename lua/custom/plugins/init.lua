@@ -4,7 +4,6 @@
 -- See the kickstart.nvim README for more information
 return {
   -- Undotree
-
   {
     'mbbill/undotree',
     cmd = 'UndotreeToggle', -- 🔧 explicitly say this is a command we want to lazy-load on
@@ -18,6 +17,7 @@ return {
       },
     },
   },
+
   -- Harpoon
   {
     'ThePrimeagen/harpoon',
@@ -28,7 +28,7 @@ return {
       harpoon:setup()
 
       vim.keymap.set('n', '<leader>a', function()
-        harpoon:list():append()
+        harpoon:list():add()
       end, { desc = 'Harpoon add file' })
       vim.keymap.set('n', '<C-e>', function()
         harpoon.ui:toggle_quick_menu(harpoon:list())
