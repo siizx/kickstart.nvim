@@ -3,6 +3,22 @@
 --
 -- See the kickstart.nvim README for more information
 return {
+
+  -- Undotree
+  {
+    'mbbill/undotree',
+    cmd = 'UndotreeToggle', -- 🔧 explicitly say this is a command we want to lazy-load on
+    keys = {
+      {
+        '<leader>u',
+        function()
+          vim.cmd 'UndotreeToggle'
+        end,
+        desc = 'Toggle Undotree',
+      },
+    },
+  },
+
   -- Harpoon with fzf integration
   {
     'ThePrimeagen/harpoon',
